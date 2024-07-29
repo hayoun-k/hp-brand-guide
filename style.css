@@ -5,7 +5,7 @@
 }
 
 header {
-  padding: 40px 130px;
+  padding: 40px min(130px, 9%);
 }
 
 .logo img {
@@ -14,7 +14,9 @@ header {
 }
 
 main {
-  padding: 65px 130px;
+  max-width: 100%;
+  padding: 65px min(130px, 9%);
+  position: relative;
 }
 
 section {
@@ -51,6 +53,43 @@ h3 {
 a {
   color: #2f80ed;
   text-decoration: none;
+}
+
+@media screen and (max-width:800px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.68rem;
+  }
+
+  h3 {
+    font-size: 0.94rem;
+  }
+
+  p, a { 
+    font-size: 0.75rem;
+  }
+
+}
+
+@media screen and (max-width:470px) {
+  h1 {
+    font-size: 1.68rem;
+  }
+
+  h2 {
+    font-size: 1.26rem;
+  }
+
+  h3 {
+    font-size: 0.7rem;
+  }
+
+  /* p, a {
+    font-size: 0.56rem;
+  } */
 }
 
 /* util */
@@ -105,6 +144,24 @@ a {
   font-family: 'Sora', sans-serif;
 }
 
+@media screen and (max-width:800px) {
+  .typography p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .typography p {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .typography p {
+    font-size: 2rem;
+  }
+}
+
 /* brand colors */
 
 .brand-colors .container {
@@ -120,8 +177,9 @@ div:is(.db, .lb) {
 
 .colorbox {
   content: '';
-  width: 181px;
+  width: auto;
   height: 181px;
+  aspect-ratio: 1 / 1;
 }
 
 .db .colorbox {
@@ -139,12 +197,46 @@ div:is(.db, .lb) {
   gap: 8px;
 }
 
+@media screen and (max-width:1023px) {
+  .brand-colors .container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .brand-colors {
+    display: grid;
+  }
+
+  .brand-colors .container {
+    justify-self: center;
+  }
+
+  .colorbox {
+    height: 135px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  :is(.db, .lb) .description p {
+    letter-spacing: -0.5px;
+    text-wrap: wrap;
+  }
+}
+
 /* logos */
 
 :is(.h-logos, .v-logos) .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 19px;
+}
+
+:is(.h-logos, .v-logos) .container .item {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
 }
 
 :is(.h-logos, .v-logos) .img-container {
@@ -173,4 +265,12 @@ div:is(.db, .lb) {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+@media screen and (max-width: 1380px) {
+  :is(.h-logos, .v-logos) .container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
 }
