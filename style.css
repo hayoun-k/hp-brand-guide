@@ -242,6 +242,7 @@ div:is(.db, .lb) {
 :is(.h-logos, .v-logos) .img-container {
   max-width: 381px;
   height: 121px;
+  aspect-ratio: 3.1667 / 1;
   margin-bottom: 15px;
   border: 1px solid #bdbdbd;
   display: flex;
@@ -273,4 +274,10 @@ div:is(.db, .lb) {
     justify-content: center;
   }
 
+}
+
+@media screen and (max-width: 470px) {
+  :is(.h-logos, .v-logos) .img-container {
+    height: 90px;
+  }
 }
