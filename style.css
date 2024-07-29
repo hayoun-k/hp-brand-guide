@@ -3,3 +3,174 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+header {
+  padding: 40px 130px;
+}
+
+.logo img {
+  height: 22px;
+  display: block;
+}
+
+main {
+  padding: 65px 130px;
+}
+
+section {
+  margin-bottom: 30px;
+  padding-block: 10px;
+  border-top: 1px solid #bdbdbd;
+}
+
+h1, h2, h3, p, span, a {
+  font-family: 'Outfit',sans-serif;
+  line-height: 1.26;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+:is(.brand-colors, .h-logos, .v-logos) h2 {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+a {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+/* util */
+.link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  padding: 8px;
+  border: 1px solid #333333;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* typography section */
+
+.typography :is(h2, h3, p, .link) {
+  margin-bottom: 10px;
+}
+
+
+.typography p {
+  font-size: 4rem;
+}
+
+.Aa {
+  font-weight: 300;
+}
+
+.Bb {
+  font-weight: 400;
+}
+
+.Cc {
+  font-weight: 500;
+}
+
+.Dd {
+  font-weight: 600;
+}
+
+.Ee {
+  font-weight: 700;
+}
+
+.sora p,
+.sora p span {
+  font-family: 'Sora', sans-serif;
+}
+
+/* brand colors */
+
+.brand-colors .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div:is(.db, .lb) {
+  display: flex;
+  gap: 19px;
+}
+
+
+.colorbox {
+  content: '';
+  width: 181px;
+  height: 181px;
+}
+
+.db .colorbox {
+  background-color: #093762;
+}
+
+.lb .colorbox {
+  background-color: #48a7ff;
+}
+
+.brand-colors .description {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* logos */
+
+:is(.h-logos, .v-logos) .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 19px;
+}
+
+:is(.h-logos, .v-logos) .img-container {
+  max-width: 381px;
+  height: 121px;
+  margin-bottom: 15px;
+  border: 1px solid #bdbdbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  display: block;
+}
+
+.img-container:has(.white) {
+  background-color: #828282;
+}
+
+:is(.h-logos, .v-logos) .container .item .description h3 {
+  margin-bottom: 15px;
+}
+
+.logos-link {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
